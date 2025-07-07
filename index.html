@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>AR Framed Layout</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
-  <script src="ar_carebot_1_july7.js" defer></script>
+  <script src="ar_carebot_1_july7_2.js" defer></script>
   <style>
     html, body {
       margin: 0;
@@ -34,19 +34,6 @@
       background: rgba(255, 20, 147, 0.05);
     }
 
-    #instruction-text {
-      position: absolute;
-      top: 52vh;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      z-index: 25;
-      text-shadow: 0 0 4px black;
-      text-align: center;
-    }
-
     .links-col {
       position: absolute;
       display: flex;
@@ -72,13 +59,13 @@
       font-weight: bold;
       font-size: 13px;
       text-align: center;
-      width: 60px;
+      width: 120px;
     }
 
     .bottom-button {
       position: absolute;
       left: 50%;
-      bottom: 20px;
+      bottom: 10px;
       transform: translateX(-50%);
       background: deeppink;
       color: white;
@@ -95,11 +82,9 @@
   <div id="outer-frame"></div>
   <div id="top-frame"></div>
 
-  <!-- 👇 Instruction Text -->
-  <div id="instruction-text">Place the carebot in the box above</div>
-
+  <!-- Links and button -->
   <div class="links-col" id="left-links"></div>
   <div class="links-col" id="right-links"></div>
-  <a class="bottom-button" href="https://sarahbuckius.com/carebot-1-0/">carebot 1.0</a>
+  <a class="bottom-button" href="#">Special Action</a>
 </body>
 </html>
