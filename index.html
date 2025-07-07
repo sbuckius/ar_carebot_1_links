@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>AR Framed Layout</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <script src="ar_carebot_1_july7.js" defer></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    #outer-frame, #top-frame {
+      position: absolute;
+      border: 4px solid deeppink;
+      border-radius: 12px;
+      pointer-events: none;
+      z-index: 10;
+      box-sizing: border-box;
+    }
+
+    #top-frame {
+      background: rgba(255, 20, 147, 0.05);
+    }
+
+    #instruction-text {
+      position: absolute;
+      top: 52vh;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 25;
+      text-shadow: 0 0 4px black;
+      text-align: center;
+    }
+
+    .links-col {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 30;
+    }
+
+    #left-links {
+      left: 10px;
+    }
+
+    #right-links {
+      right: 10px;
+    }
+
+    .link-overlay {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 13px;
+      text-align: center;
+      width: 60px;
+    }
+
+    .bottom-button {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      background: deeppink;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 30;
+    }
+  </style>
+</head>
+<body>
+  <div id="outer-frame"></div>
+  <div id="top-frame"></div>
+
+  <!-- 👇 Instruction Text -->
+  <div id="instruction-text">Place the carebot in the box above</div>
+
+  <div class="links-col" id="left-links"></div>
+  <div class="links-col" id="right-links"></div>
+  <a class="bottom-button" href="https://sarahbuckius.com/carebot-1-0/">carebot 1.0</a>
+</body>
+</html>
